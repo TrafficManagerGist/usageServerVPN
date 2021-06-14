@@ -14,4 +14,4 @@ def give_json():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='10.168.0.2', port=80)
