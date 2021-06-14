@@ -8,9 +8,8 @@ app = Flask(__name__)
 @app.route('/')
 def give_json():
     cpu = psutil.cpu_percent()
-    mem = psutil.virtual_memory().percent
-    perf = cpu + mem
-    return json.dumps({'cpu': cpu, 'mem': mem, 'perf': perf})
+    mem = psutil.virtual_memory()[2]
+    return json.dumps({'cpu': cpu, 'mem': mem})
 
 
 if __name__ == '__main__':
