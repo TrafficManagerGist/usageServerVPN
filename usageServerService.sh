@@ -1,6 +1,3 @@
 #!/bin/sh
-screen -S usageServer
-
-echo "$1" | sudo -S python3 usageServer.py
-
+screen -d -m echo "$1" | sudo -S python3 usageServer.py
 exit 0

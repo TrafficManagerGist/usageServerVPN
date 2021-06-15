@@ -12,7 +12,7 @@ echo "Enter Password and press [ENTER]: "
 read -r password
 
 line="@reboot /home/$USER/usageServerService.sh"
-(crontab -u '$USER' -l; echo "$line" ) | crontab -u '$USER' -
+(crontab -u $USER -l; echo "$line" ) | crontab -u $USER -
 
 sh usageServerService.sh "$password"
 
