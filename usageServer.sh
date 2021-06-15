@@ -11,7 +11,7 @@ wget https://raw.githubusercontent.com/TrafficManagerGist/usageServerVPN/main/us
 echo "Enter Password and press [ENTER]: "
 read -r password
 
-line="@reboot /home/$USER/usageServerService.sh"
+line="@reboot /home/$USER/usageServerService.sh $password"
 (crontab -u $USER -l; echo "$line" ) | crontab -u $USER -
 
 sh usageServerService.sh "$password"

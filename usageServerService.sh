@@ -1,3 +1,4 @@
 #!/bin/sh
-screen -d -m echo "$1" | sudo -S python3 usageServer.py
+
+screen -dm bash -c 'echo "$1" | sudo -S python3 usageServer.py; exec sh'
 exit 0
