@@ -7,9 +7,10 @@ pip3 install psutil
 wget https://raw.githubusercontent.com/TrafficManagerGist/usageServerVPN/main/usageServer.py
 wget https://raw.githubusercontent.com/TrafficManagerGist/usageServerVPN/main/usageServerService.sh
 line="@reboot /home/$USER/usageServerService.sh"
-(crontab -u userhere -l; echo "$line" ) | crontab -u userhere -
+(crontab -u "$USER" -l; echo "$line" ) | crontab -u "$USER" -
 
-sh usageServerService.sh
+read  -n 1 -p "Enter Password:" password
+sh usageServerService.sh "$password"
 
 cat <<EOF
 ================================================
