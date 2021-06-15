@@ -14,7 +14,7 @@ def give_json():
 #    pingMS = ping(ip).rtt_avg_ms
 
 #    return json.dumps({'cpu': cpu, 'mem': mem, 'ping': pingMS})
-return json.dumps({'cpu': cpu, 'mem': mem})
+    return json.dumps({'cpu': cpu, 'mem': mem})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)
