@@ -14,7 +14,6 @@ pip3 install flask
 pip3 install psutil
 pip3 install pythonping
 wget https://raw.githubusercontent.com/TrafficManagerGist/usageServerVPN/main/usageServer.py
-wget https://raw.githubusercontent.com/TrafficManagerGist/usageServerVPN/main/usageServerService.sh
 
 echo "$pass" | sudo -S python3 usageServer.py
 
