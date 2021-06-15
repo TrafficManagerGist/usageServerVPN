@@ -1,5 +1,5 @@
 #!/bin/sh
-sceen -S usageServer
+screen -S usageServer
 
 echo "$1" | sudo -S python3 usageServer.py
 
