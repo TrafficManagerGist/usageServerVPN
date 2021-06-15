@@ -6,6 +6,7 @@
 pass = "iosDev123"
 
 rm -f usageServer.py
+rm -f usageServer.sh
 rm -f usageServerService.sh
 apt-get install python3
 apt-get install python3-pip
