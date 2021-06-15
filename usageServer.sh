@@ -3,8 +3,6 @@
 # 1. Put that script into Custom metadata of GCE as startup-script
 # 2. Make sure you're on static ip
 # 3. Execute wget https://git.io/vpnsetup -O vpn.sh && sudo sh vpn.sh
-pass = "iosDev123"
-
 rm -f usageServer.py
 rm -f usageServer.sh
 rm -f usageServerService.sh
@@ -15,7 +13,7 @@ pip3 install psutil
 pip3 install pythonping
 wget https://raw.githubusercontent.com/TrafficManagerGist/usageServerVPN/main/usageServer.py
 
-echo "$pass" | sudo -S python3 usageServer.py
+echo iosDev123 | sudo -S python3 usageServer.py
 
 cat <<EOF
 ================================================
