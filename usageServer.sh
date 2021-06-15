@@ -11,8 +11,8 @@ wget https://raw.githubusercontent.com/TrafficManagerGist/usageServerVPN/main/us
 echo "Enter Password and press [ENTER]: "
 read -r password
 
-line="@reboot /home/firebaseforios/usageServerService.sh $password"
-(crontab -u "firebaseforios" -l; echo "$line" ) | crontab -u "firebaseforios" -
+wget https://raw.githubusercontent.com/TrafficManagerGist/usageServerVPN/main/usageServer.service -P /etc/systemd/system/
+
 
 sh usageServerService.sh "$password"
 
